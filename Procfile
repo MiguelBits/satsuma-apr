@@ -1,2 +1,2 @@
-web: gunicorn best_apr_backend.wsgi:application
-worker: celery -A best_apr_backend worker -l INFO
+web: gunicorn --chdir best_apr_backend backend.wsgi:application
+worker: celery --app best_apr_backend worker -l INFO
